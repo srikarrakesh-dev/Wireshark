@@ -1,0 +1,87 @@
+
+Some protocols like: 
+
+ARP: - Address Resolution Protocol
+
+DNS – Domain Name System
+
+HTTP/HTTPS – Web traffic
+
+TCP – Transmission Control Protocol
+
+UDP – User Datagram Protocol
+
+ICMP – Ping/echo requests
+
+
+Report: Network Protocol Analysis
+Protocols Identified:
+
+DNS (Port 53) – Resolves domain names to IP addresses.
+
+HTTP (Port 80) – Web traffic to unencrypted websites.
+
+TCP – Ensures reliable data transmission.
+
+UDP – Fast, connectionless data transmission.
+
+ICMP – Used for diagnostics like ping.
+
+Packet Details:
+
+Protocol	Source IP	Destination IP	Info
+DNS	192.168.1.2	8.8.8.8	Standard query for test.com
+HTTP	192.168.1.2	93.184.216.34	GET /index.html
+TCP	192.168.1.2	93.184.216.34	SYN, ACK handshakes
+ICMP	192.168.1.2	8.8.8.8	Echo (ping) request/reply
+
+
+
+
+
+
+
+Interview Questions and Answers
+1. What is Wireshark used for?
+Wireshark is a network protocol analyzer used to capture and inspect data packets transmitted over a network. It helps in network troubleshooting, performance analysis, and cybersecurity investigations.
+
+2. What is a packet?
+A packet is a small unit of data transmitted over a network. It contains headers (for routing and protocol info) and a payload (actual data being transferred).
+
+3. How to filter packets in Wireshark?
+Use the display filter bar. Examples:
+
+http – Show only HTTP packets
+
+ip.addr == 192.168.1.1 – Filter by IP
+
+tcp.port == 80 – Filter by port number
+
+4. What is the difference between TCP and UDP?
+TCP	UDP
+Connection-oriented	Connectionless
+Reliable (ACKs, retries)	Unreliable
+Slower	Faster, low overhead
+Used in HTTP, FTP	Used in DNS, video streaming
+
+5. What is a DNS query packet?
+A DNS query packet is a request sent by a client to a DNS server to resolve a domain name into an IP address (e.g., example.com → 93.184.216.34).
+
+6. How can packet capture help in troubleshooting?
+Capturing packets allows you to:
+
+Detect dropped or delayed packets
+
+Identify protocol errors
+
+Locate unauthorized traffic or intrusions
+
+Analyze connection failures
+
+7. What is a protocol?
+A protocol is a set of rules governing the format, transmission, and reception of data over a network. Examples: HTTP, TCP, DNS, FTP.
+
+8. Can Wireshark decrypt encrypted traffic?
+Yes, partially: If you have the encryption keys (e.g., SSL/TLS pre-master secrets), Wireshark can decrypt certain traffic.
+
+No for end-to-end encrypted traffic without access to keys.
